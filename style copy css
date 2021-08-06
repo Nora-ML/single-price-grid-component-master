@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color:rgb(205, 217, 228);
+    position: relative;
+/*centering the container*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{    
+/*setting the container as a grid*/
+    display: grid;
+    grid-template-rows: 45.83% 54.17%;
+    grid-template-areas: 'a ' 'b ';
+    align-content: center;
+}
+.intro{
+    border-radius: 10px 10px 0 0;
+    grid-area: a;
+    background-color: white;
+    padding: .5rem 3rem 1rem 3rem;
+}
+.container2{
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+
+}
+.fees,.sell{
+    padding: 1rem 3rem 1.5rem 3rem; 
+}
+.fees{
+    border-radius: 0 0 0 10px; 
+    background-color: hsl(179, 62%, 43%);
+}
+.sell{
+    border-radius: 0 0 10px 0; 
+    background-color: hsla(179, 62%, 43%, 0.836);
+}
+
+h2{
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+}
+h3,h1{
+    color: whitesmoke;
+}
+.fees h1, .fees p{
+    margin:0%;
+}
+h1>p{
+    vertical-align:super;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: hsl(204, 43%, 93%,.80);
+}
+
+.intro h3{
+    color: hsl(71, 73%, 54%);
+}
+.intro p{
+    font-size: 15px;
+    color: hsl(218, 22%, 67%,0.8);
+}
+button{
+    margin-top: 27px;
+    background-color:hsl(71, 73%, 54%) ;
+    width: 100%;
+    padding: 14px;
+    border-radius: 5px;
+    border:transparent;
+    box-shadow: 0 2px 5px 0.1px hsl(179, 90%, 25%),0 5px 10px 0.2px hsl(179, 90%, 25%) ;
+}
+
+button h4{
+    margin: 0;
+    color: white;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (max-width:700px) {
+    .fees, .sell, .intro{
+        /* background-color: tomato; */
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem; 
+    }
+    .intro p{
+        font-size: 14 px;
+    }
+  }
+  
+  @media screen and (max-width:570px) {
+    body{
+        height:fit-content;
+        overflow: visible;
+    }
+    .container{
+        margin: 30px 25px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    h3{
+        font-size: 16px;
+    }
+}
+
+  @media screen and (max-width:375px) {
+    .container2{
+        grid-template-columns: 100%; 
+    }
+    .container{
+        grid-template-rows: auto;
+    }
+    .fees{
+        border-radius: 0; 
+    }
+    .sell{
+        border-radius: 0 0 10px 10px; 
+        background-color: hsla(179, 62%, 43%, 0.836);
+    }
+  }
+
